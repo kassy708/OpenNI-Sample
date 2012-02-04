@@ -1,0 +1,18 @@
+すべてのプログラムはOpenCV2.2とOpenGLを用いています。
+各自必要な部分を改良してください。
+
+・サンプルの説明
+PointCloud
+　OpenGLを使ったポイントクラウド
+
+PointCloud-SkeletonTracking
+　ポイントクラウドと骨格追跡
+
+TextureMap
+　OpenGLを使ったテクスチャマップ(glBeginを用いた)
+
+TextureMap2
+　OpenGLを使ったテクスチャマップ(glTexImage2Dを用いた)
+
+PlayerDetection
+　人物検出
