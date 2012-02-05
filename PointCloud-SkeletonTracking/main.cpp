@@ -244,10 +244,6 @@ void retrievePointCloudMap(Mat &depth,Mat &pointCloud_XYZ){
 
 //êlï®ÇÃçúäiÇï`âÊ
 void drawUserJoint(){
-	XnBool g_bDrawSkeleton = TRUE;
-	XnBool g_bPrintID = TRUE;
-	XnBool g_bPrintState = TRUE;
-	char strLabel[50] = "";
 	XnUserID aUsers[15];
 	XnUInt16 nUsers = 15;
 	userGenerator.GetUsers(aUsers, nUsers);
@@ -292,10 +288,6 @@ void drawUserJoint(){
 	}
 }
 void DrawJoint(XnUserID player, XnSkeletonJoint eJoint){
-	if (!userGenerator.GetSkeletonCap().IsTracking(player)){
-		printf("not tracked!\n");
-		return;
-	}
 	XnSkeletonJointPosition joint;
 	userGenerator.GetSkeletonCap().GetSkeletonJointPosition(player, eJoint, joint);
 
@@ -306,11 +298,6 @@ void DrawJoint(XnUserID player, XnSkeletonJoint eJoint){
 	glVertex3f(joint.position.X* 0.001f, joint.position.Y* 0.001f, joint.position.Z* 0.001f);
 }
 void DrawLimb(XnUserID player, XnSkeletonJoint eJoint1, XnSkeletonJoint eJoint2){
-	if (!userGenerator.GetSkeletonCap().IsTracking(player)){
-		printf("not tracked!\n");
-		return;
-	}
-
 	XnSkeletonJointPosition joint1, joint2;
 	userGenerator.GetSkeletonCap().GetSkeletonJointPosition(player, eJoint1, joint1);
 	userGenerator.GetSkeletonCap().GetSkeletonJointPosition(player, eJoint2, joint2);
