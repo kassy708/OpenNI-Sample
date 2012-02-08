@@ -62,23 +62,9 @@ const XnMapOutputMode OUTPUT_MODE = { 640, 480, 30 };
 class WindowData{
 public:
 	int windowID;
-	int formWidth;
-	int formHeight;
-	int mButton;
-	float twist, elevation, azimuth;
-	float cameraDistance,cameraX,cameraY;
-	int xBegin, yBegin;
 	WindowData(){
 		formWidth = 640;
 		formHeight = 480;
-		cameraDistance = 0,cameraX = 0,cameraY = 0;
-	}
-	//‹“_•ÏX
-	void polarview(){
-		glTranslatef( cameraX, cameraY, cameraDistance);
-		glRotatef( -twist, 0.0, 0.0, 1.0);
-		glRotatef( -elevation, 1.0, 0.0, 0.0);
-		glRotatef( -azimuth, 0.0, 1.0, 0.0);
 	}
 };
 // Kinect‚²‚Æ‚Ì•\¦î•ñ
